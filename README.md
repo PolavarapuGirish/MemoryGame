@@ -1,46 +1,49 @@
-# MemoryGame
-
+# Memory Game
 Memory Card Matching Game
 
 Overview
 
-This project implements a Memory Card Matching Game using a 4 × 4 grid of hidden cards. The objective of the game is to flip two cards at a time and find matching pairs. If the selected cards match, they remain visible; otherwise, they flip back to hidden.
+The Memory Card Matching Game is a simple terminal-based game implemented using programming logic and arrays. The game consists of a 4 × 4 grid of hidden cards. The objective is to reveal pairs of matching cards by selecting their coordinates.
 
-The game continues until all card pairs are successfully matched. The program also tracks the number of moves taken by the player to complete the game.
+Each turn, the player flips two cards.
+	•	If the cards match, they remain visible.
+	•	If the cards do not match, they flip back to the hidden state.
 
-This implementation is designed to demonstrate basic game logic, input validation, and board display in a terminal-based environment.
+The game continues until all pairs are successfully matched, and the program keeps track of the number of moves taken by the player.  ￼
 
 ⸻
 
 Gameplay Instructions
-	1.	The game begins with a 4 × 4 grid of cards, where each card is hidden and displayed as *.
+	1.	The game starts with a 4 × 4 grid of cards, where each card is hidden and represented by *.
 	2.	During each turn:
-	•	The player enters the row and column of the first card to flip.
-	•	Then enters the row and column of the second card to flip.
-	3.	If the two selected cards match, they remain visible on the board.
-	4.	If the two cards do not match, they flip back to the hidden state.
-	5.	The game continues until all pairs of cards are matched.
-	6.	The program tracks and displays the total number of moves taken to complete the game.  ￼
+	•	Enter the row and column of the first card to flip.
+	•	Enter the row and column of the second card to flip.
+	3.	If the selected cards match, they remain visible on the board.
+	4.	If the selected cards do not match, they flip back to hidden.
+	5.	The game continues until all pairs are matched.
+	6.	The program tracks and displays the number of moves required to complete the game.  ￼
 
 ⸻
 
 Input Format
-	•	The player must input row and column numbers as integers.
+	•	The player must enter the row and column numbers as integers.
 	•	Row and column indexing starts from 1.
-	•	For example:
+
+Example:
 
 1 1
 
-represents the top-left card on the board.
+This represents the top-left corner of the grid.
 
 Input Rules
-	•	The player must choose two different cards per turn.
-	•	If the same card is selected twice or the input is invalid, the program will display an error message and ask the user to try again.  ￼
+	•	The player must select two different cards per turn.
+	•	If the player selects the same card twice or provides invalid input, the program will display an error message and ask the player to try again.  ￼
 
 ⸻
 
-## Sample Output
-### First Move
+Sample Output
+
+First Move
 
 Enter the coordinates of the first card (row and column): 1 1
 
@@ -50,9 +53,11 @@ Current Board:
 * * * *
 * * * *
 
----
 
-### Matching Cards
+⸻
+
+Matching Cards
+
 Current Board:
 2 * * *
 * * * *
@@ -61,9 +66,11 @@ Current Board:
 
 It's a match!
 
----
 
-### Non-Matching Cards
+⸻
+
+Non-Matching Cards
+
 Enter the coordinates of the first card (row and column): 1 1
 Enter the coordinates of the second card (row and column): 2 2
 
@@ -79,23 +86,57 @@ No match, try again.
 ⸻
 
 Features
-	•	4 × 4 memory card grid
-	•	Hidden card display using *
+	•	4 × 4 card grid
+	•	Hidden card representation using *
 	•	Card flipping mechanism
-	•	Match checking logic
+	•	Matching pair detection
 	•	Move counter
-	•	Input validation for incorrect selections
-	•	Terminal-based board visualization
+	•	Input validation
+	•	Terminal-based board display
 
 ⸻
 
-How to Run
-	1.	Compile the program
+Algorithm
+	1.	Initialize a 4 × 4 board with pairs of numbers.
+	2.	Shuffle the cards randomly.
+	3.	Display the board with hidden cards (*).
+	4.	Ask the player to enter the coordinates of two cards.
+	5.	Reveal the selected cards.
+	6.	Check if the two cards match:
+	•	If yes → keep them visible.
+	•	If no → hide them again.
+	7.	Increase the move counter.
+	8.	Repeat the process until all pairs are matched.
+
+⸻
+
+How to Run the Program
+
+Step 1: Compile the program
 
 gcc memory_game.c -o memory_game
 
-	2.	Run the program
+Step 2: Run the program
 
 ./memory_game
 
-	3.	Follow the on-screen instructions to play the game.
+Step 3: Play the game
+
+Follow the instructions displayed in the terminal and enter the coordinates to reveal cards.
+
+⸻
+
+Project Structure
+
+Memory-Card-Game
+│
+├── memory_game.c
+├── README.md
+
+
+⸻
+
+Author
+
+Girish Polavarapu
+Computer Science Student
