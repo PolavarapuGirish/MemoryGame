@@ -39,9 +39,8 @@ Input Rules
 
 ⸻
 
-Sample Output
-
-First Move
+## Sample Output
+### First Move
 
 Enter the coordinates of the first card (row and column): 1 1
 
@@ -51,8 +50,9 @@ Current Board:
 * * * *
 * * * *
 
-Matching Cards
+---
 
+### Matching Cards
 Current Board:
 2 * * *
 * * * *
@@ -61,8 +61,9 @@ Current Board:
 
 It's a match!
 
-Non-Matching Cards
+---
 
+### Non-Matching Cards
 Enter the coordinates of the first card (row and column): 1 1
 Enter the coordinates of the second card (row and column): 2 2
 
